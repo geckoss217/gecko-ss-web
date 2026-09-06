@@ -1,1 +1,5 @@
-{ "type": "module" }
+{
+  "name": "gecko-ss-web",
+  "private": true,
+  "scripts": { "deploy": "wrangler pages deploy public --project-name gecko-ss-web" }
+}
