@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gecko SS | AI Integration for Small Service Businesses</title>
+<meta name="description" content="Gecko SS puts practical AI to work inside small service businesses: faster lead response, automated follow-up, scheduling, and back-office cleanup. Free first call. Engagements start at $1,000/month.">
+<link rel="canonical" href="https://gecko-ss.com/">
+<meta property="og:title" content="Gecko SS | AI Integration for Small Service Businesses">
+<meta property="og:description" content="Practical AI for plumbers, cleaners, HVAC, landscapers, and every other service business that answers the phone. Free first call.">
+<meta property="og:url" content="https://gecko-ss.com/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M18 40c0-12 8-20 20-20 4 0 8 1 10 3l-4 6c-2-1-4-2-6-2-7 0-11 5-11 13 0 7 4 11 11 11 3 0 5-1 7-2v-6h-8v-7h16v17c-4 3-9 5-15 5-12 0-20-7-20-18z' fill='%2322c55e'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Gecko SS",
+  "url": "https://gecko-ss.com/",
+  "description": "AI integration consulting for small service-based businesses.",
+  "areaServed": "US",
+  "priceRange": "$1,000+/month",
+  "address": {"@type": "PostalAddress", "addressRegion": "CO", "addressCountry": "US"}
+}
+</script>
+<style>
+:root{
+  --ink:#0f172a; --ink-2:#334155; --muted:#64748b; --line:#e2e8f0;
+  --bg:#ffffff; --bg-soft:#f8fafc; --accent:#16a34a; --accent-ink:#14532d; --accent-soft:#dcfce7;
+  --max:1100px; --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3.2vw,2.2rem);font-weight:750}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0 0 1em}
+.lead{font-size:1.15rem;color:var(--ink-2)}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);background:var(--accent-soft);padding:.3em .8em;border-radius:999px;margin-bottom:1rem}
+.btn{display:inline-block;padding:.85em 1.4em;border-radius:10px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;transition:transform .08s,box-shadow .15s}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(22,163,74,.25)}
+.btn-primary:hover{background:#15803d}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--ink)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.fine{font-size:.9rem;color:var(--muted)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:1.1rem}
+.brand svg{width:30px;height:30px}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;color:var(--ink-2);font-weight:600;font-size:.95rem}
+.nav ul a:hover{color:var(--ink)}
+.nav .btn{padding:.6em 1em;font-size:.9rem}
+@media(max-width:760px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding:72px 0 56px;background:radial-gradient(1200px 500px at 80% -10%,var(--accent-soft),transparent 60%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+.hero .lead{max-width:56ch}
+.proof{display:flex;gap:26px;flex-wrap:wrap;margin-top:28px;color:var(--ink-2);font-size:.95rem}
+.proof b{display:block;font-size:1.4rem;color:var(--ink)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.sample{font-size:.95rem}
+.sample .row{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.sample .row:last-child{border:0}
+.sample .t{color:var(--muted);min-width:64px;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;padding:.15em .6em;border-radius:6px;background:var(--accent-soft);color:var(--accent-ink);margin-left:6px;vertical-align:middle}
+
+/* sections */
+section{padding:72px 0}
+section.soft{background:var(--bg-soft)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:860px){.grid-3,.grid-2{grid-template-columns:1fr}}
+.tile{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.tile .n{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--ink);color:#fff;font-weight:800;margin-bottom:14px}
+.tile ul{margin:.6em 0 0;padding-left:1.1em;color:var(--ink-2)}
+.tile li{margin:.3em 0}
+.who{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.who span{border:1px solid var(--line);border-radius:999px;padding:.4em .9em;font-size:.92rem;background:#fff}
+
+/* steps */
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:18px;background:var(--accent);color:#fff;font-weight:800;width:28px;height:28px;border-radius:999px;display:grid;place-items:center;font-size:.9rem}
+.step h3{margin-top:6px}
+.step p{color:var(--ink-2);margin:0;font-size:.95rem}
+
+/* pricing */
+.price-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+@media(max-width:860px){.price-wrap{grid-template-columns:1fr}}
+.price{background:var(--ink);color:#fff;border-radius:var(--r);padding:32px}
+.price .amt{font-size:clamp(2.4rem,6vw,3.6rem);font-weight:800;letter-spacing:-.02em;line-height:1}
+.price .amt small{font-size:1rem;font-weight:600;opacity:.8;letter-spacing:0}
+.price ul{list-style:none;padding:0;margin:20px 0}
+.price li{padding:8px 0;border-top:1px solid rgba(255,255,255,.12)}
+.price li::before{content:"✓";color:#4ade80;font-weight:800;margin-right:10px}
+.price .btn-primary{width:100%;text-align:center}
+.notfor{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.notfor ul{padding-left:1.1em;color:var(--ink-2)}
+
+/* founder */
+.founder{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start}
+@media(max-width:640px){.founder{grid-template-columns:1fr}}
+.avatar{width:96px;height:96px;border-radius:24px;background:linear-gradient(135deg,var(--ink),#1e293b);display:grid;place-items:center;color:#fff;font-weight:800;font-size:2rem}
+blockquote{margin:0;font-size:1.1rem;color:var(--ink-2)}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:700;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::after{content:"+";font-size:1.4rem;color:var(--muted)}
+details[open] summary::after{content:"–"}
+details p{color:var(--ink-2);margin:10px 0 0}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:.92rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:.75em .9em;border:1px solid #cbd5e1;border-radius:10px;width:100%;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+textarea{min-height:110px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.92rem;color:var(--ink-2)}
+.check input{width:auto;margin-top:4px}
+.hp{position:absolute;left:-9999px}
+.msg{padding:12px 14px;border-radius:10px;font-weight:600;display:none}
+.msg.ok{display:block;background:var(--accent-soft);color:var(--accent-ink)}
+.msg.err{display:block;background:#fee2e2;color:#7f1d1d}
+
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Gecko SS home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0f172a"/><path d="M18 40c0-12 8-20 20-20 4 0 8 1 10 3l-4 6c-2-1-4-2-6-2-7 0-11 5-11 13 0 7 4 11 11 11 3 0 5-1 7-2v-6h-8v-7h16v17c-4 3-9 5-15 5-12 0-20-7-20-18z" fill="#22c55e"/></svg>
+      Gecko SS
+    </a>
+    <ul>
+      <li><a href="#what">What we do</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#contact">Book a free call</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">AI integration for service businesses</span>
+      <h1>Your phone rings. Your inbox fills up. Let AI handle the part that keeps falling through the cracks.</h1>
+      <p class="lead">Gecko SS installs practical AI inside small service businesses. Missed calls get answered. Quotes go out the same day. Follow-up happens without anyone remembering to do it. You keep running the business.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Book a free call</a>
+        <a class="btn btn-ghost" href="#pricing">See pricing</a>
+      </div>
+      <p class="fine" style="margin-top:14px">The first call is free. Ongoing engagements start at $1,000/month.</p>
+      <div class="proof">
+        <div><b>Same day</b>quote turnaround target</div>
+        <div><b>24/7</b>lead capture, no extra staff</div>
+        <div><b>30 days</b>to your first live system</div>
+      </div>
+    </div>
+    <div class="card sample" aria-label="Example of an automated lead workflow">
+      <strong>A Tuesday afternoon, after we set you up</strong>
+      <div class="row"><span class="t">2:14 PM</span><span>Missed call from a new number. AI texts back in 20 seconds, asks what they need and where.</span></div>
+      <div class="row"><span class="t">2:16 PM</span><span>Customer replies with photos. Job gets logged in your CRM with the address and details filled in.<span class="tag">auto</span></span></div>
+      <div class="row"><span class="t">2:19 PM</span><span>You get one text: "New job, water heater swap, Aurora. Quote draft ready. Approve?"</span></div>
+      <div class="row"><span class="t">2:31 PM</span><span>You tap approve from the truck. Quote sent. Reminder scheduled for Thursday if they go quiet.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <span class="eyebrow">What we do</span>
+    <h2>Three places AI pays for itself fast in a service business</h2>
+    <p class="lead" style="max-width:64ch">We pick the one costing you the most money right now and fix that first. Nothing gets built for the sake of building it.</p>
+    <div class="grid-3" style="margin-top:28px">
+      <div class="tile">
+        <span class="n">1</span>
+        <h3>Lead response and booking</h3>
+        <p>Every call, text, form, and web chat gets a fast, human-sounding reply. Qualified leads land on your calendar or in your CRM with the details already filled in.</p>
+        <ul>
+          <li>Missed-call text back</li>
+          <li>AI phone and chat answering</li>
+          <li>Quote drafts from photos and notes</li>
+        </ul>
+      </div>
+      <div class="tile">
+        <span class="n">2</span>
+        <h3>Follow-up and reviews</h3>
+        <p>Open quotes get chased. Finished jobs get a review request. Past customers hear from you on a schedule. All of it runs from the tools you already use.</p>
+        <ul>
+          <li>Quote follow-up sequences</li>
+          <li>Review requests and reply drafting</li>
+          <li>Reactivation of old customers</li>
+        </ul>
+      </div>
+      <div class="tile">
+        <span class="n">3</span>
+        <h3>Back office and reporting</h3>
+        <p>Invoices, tech dispatch notes, job summaries, and the weekly numbers you keep meaning to look at. Built once, delivered to your phone automatically.</p>
+        <ul>
+          <li>Job and call summaries</li>
+          <li>Invoice and payment nudges</li>
+          <li>Weekly owner dashboard</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:28px"><strong>Who this is for:</strong></p>
+    <div class="who">
+      <span>Plumbing and HVAC</span><span>Cleaning and restoration</span><span>Electrical</span><span>Landscaping and lawn care</span><span>Junk removal and hauling</span><span>Pest control</span><span>Roofing and exteriors</span><span>Home and property services</span><span>Any business that books jobs by phone</span>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="soft">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2>From first call to a system that runs on its own</h2>
+    <div class="steps" style="margin-top:36px">
+      <div class="step"><h3>Free call</h3><p>30 minutes. You tell us where jobs and money leak out. We tell you what AI can realistically fix and what it can't.</p></div>
+      <div class="step"><h3>Plan and price</h3><p>You get a short written plan: what we build first, what it connects to, and the flat monthly number. No hourly billing.</p></div>
+      <div class="step"><h3>Build and go live</h3><p>First system live within 30 days, tested on real calls and real jobs with your team. We train whoever needs training.</p></div>
+      <div class="step"><h3>Run and improve</h3><p>We monitor it, fix what breaks, and add the next piece each month. You see the numbers in a weekly report.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <span class="eyebrow">Pricing</span>
+    <h2>Flat monthly fee. Starts at $1,000.</h2>
+    <div class="price-wrap" style="margin-top:28px">
+      <div class="price">
+        <div class="amt">$1,000<small>/month minimum</small></div>
+        <p style="opacity:.85;margin-top:10px">Most clients land between $1,000 and $3,000 a month depending on how many systems we run for them. Software costs are separate and usually small.</p>
+        <ul>
+          <li>One or more live AI systems, built and maintained</li>
+          <li>Connected to your phone, CRM, calendar, and inbox</li>
+          <li>Monitoring, fixes, and monthly improvements</li>
+          <li>Weekly owner report</li>
+          <li>Direct line to the person who built it</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Book a free call</a>
+        <p class="fine" style="color:rgba(255,255,255,.7);margin:12px 0 0">Month to month after the first 90 days.</p>
+      </div>
+      <div class="notfor">
+        <h3>A quick fit check</h3>
+        <p>This works well when:</p>
+        <ul>
+          <li>You do at least $500k a year in revenue, or you're growing fast toward it</li>
+          <li>You miss calls, lose quotes to slow follow-up, or spend nights on admin</li>
+          <li>You want someone accountable for the system, not a pile of tools</li>
+        </ul>
+        <p>It's probably not a fit if you're looking for a one-time setup under $1,000, or you want to learn to build it all yourself. If that's you, book the free call anyway. We'll point you somewhere useful.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap founder">
+    <div class="avatar" aria-hidden="true">DJ</div>
+    <div>
+      <span class="eyebrow">Why us</span>
+      <h2>Built by someone who runs a service business, not just a consultancy</h2>
+      <blockquote>"I run a nationwide cleaning company with a small core team. Every system I recommend is something we've already used to answer leads faster, quote sooner, and keep the back office from eating our evenings. I know what breaks in the field, because it broke on us first."</blockquote>
+      <p style="margin-top:14px"><strong>Dustin Jackson</strong>, Founder, Gecko SS<br><span class="fine">Denver, Colorado. Serving clients across the US.</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:800px">
+    <span class="eyebrow">FAQ</span>
+    <h2>Questions owners ask on the first call</h2>
+    <details><summary>Will customers know they're talking to AI?</summary><p>Yes when it matters. The AI identifies itself when asked and hands off to a person for anything it can't handle. Customers care about a fast answer far more than who typed it.</p></details>
+    <details><summary>Do I have to change my CRM or phone system?</summary><p>Usually no. We connect to what you have: Jobber, Housecall Pro, ServiceTitan, Workiz, HubSpot, Google Workspace, Microsoft 365, RingCentral, and most others. If your current setup is the real problem, we'll say so.</p></details>
+    <details><summary>What does the $1,000 a month actually cover?</summary><p>Building, running, and improving the systems. Think of it as a part-time operations and automation person who never calls in sick. Third-party software (your phone line, your CRM, AI usage fees) is billed to you directly and is typically under a few hundred dollars a month.</p></details>
+    <details><summary>How fast will I see something working?</summary><p>The first system is live within 30 days of kickoff. Missed-call text back and quote follow-up are usually the fastest wins and often go live in the first two weeks.</p></details>
+    <details><summary>Is there a contract?</summary><p>Ninety days to start, so there's time to build and prove it. Month to month after that.</p></details>
+    <details><summary>Is my customer data safe?</summary><p>Your data stays in your accounts. We use business-tier AI services that don't train on your data, and we document every connection so you can see exactly what talks to what.</p></details>
+  </div>
+</section>
+
+<section id="contact" class="soft">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Get started</span>
+      <h2>Book a free 30-minute call</h2>
+      <p class="lead">Pick a time that works, or send the form and we'll reply within one business day.</p>
+      <div class="cta-row" style="margin:10px 0 24px">
+        <a class="btn btn-primary" id="book-btn" href="#contact-form" target="_blank" rel="noopener">Pick a time</a>
+      </div>
+      <p><strong>What to expect</strong></p>
+      <p style="color:var(--ink-2)">Twenty minutes on where jobs and money slip through, ten minutes on what to fix first and what it costs. If we're not a fit, you'll leave with a clear next step anyway.</p>
+      <p class="fine">Engagements start at $1,000/month. The call itself is free with no obligation.</p>
+    </div>
+    <form id="contact-form" class="card" novalidate>
+      <label>Name <input name="name" required autocomplete="name"></label>
+      <label>Business name <input name="business" required autocomplete="organization"></label>
+      <label>Email <input name="email" type="email" required autocomplete="email"></label>
+      <label>Phone <input name="phone" type="tel" autocomplete="tel"></label>
+      <label>What kind of business?
+        <select name="industry" required>
+          <option value="">Choose one</option>
+          <option>Plumbing / HVAC / Electrical</option>
+          <option>Cleaning / Restoration</option>
+          <option>Landscaping / Lawn care</option>
+          <option>Junk removal / Hauling</option>
+          <option>Pest control</option>
+          <option>Roofing / Exteriors</option>
+          <option>Other service business</option>
+        </select>
+      </label>
+      <label>What's the biggest leak right now? <textarea name="message" placeholder="Missed calls, slow quotes, no follow-up, admin nights, something else..."></textarea></label>
+      <label class="check"><input type="checkbox" name="budget_ok" value="yes" required> I understand engagements start at $1,000/month and the first call is free.</label>
+      <input class="hp" type="text" name="company_website" tabindex="-1" autocomplete="off">
+      <button class="btn btn-primary" type="submit">Send and request a call</button>
+      <div class="msg" id="form-msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="yr"></span> Gecko SS. Denver, Colorado.</div>
+    <div><a href="mailto:CONTACT_EMAIL" id="mail-link">CONTACT_EMAIL</a></div>
+  </div>
+</footer>
+
+<script>
+// ---- Config: edit these three values ----
+const BOOKING_URL = "";                    // e.g. https://cal.com/you/intro
+const CONTACT_EMAIL = "CONTACT_EMAIL";     // where form submissions go
+const FORM_ENDPOINT = "/api/contact";      // serverless relay (see api/contact.js)
+// -----------------------------------------
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+const ml = document.getElementById('mail-link');
+ml.href = 'mailto:' + CONTACT_EMAIL; ml.textContent = CONTACT_EMAIL;
+
+const bb = document.getElementById('book-btn');
+if (BOOKING_URL) { bb.href = BOOKING_URL; } else { bb.removeAttribute('target'); bb.textContent = 'Request a time below'; }
+
+const form = document.getElementById('contact-form');
+const msg = document.getElementById('form-msg');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  msg.className = 'msg';
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  const data = Object.fromEntries(new FormData(form).entries());
+  if (data.company_website) return; // honeypot
+  data.page = location.href;
+  const btn = form.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending...';
+  try {
+    const r = await fetch(FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data)});
+    if (!r.ok) throw new Error('bad status');
+    msg.textContent = "Got it. We'll reply within one business day.";
+    msg.className = 'msg ok'; form.reset();
+  } catch (err) {
+    const body = encodeURIComponent(Object.entries(data).map(([k,v])=>k+': '+v).join('\n'));
+    msg.innerHTML = 'Something went wrong sending the form. <a href="mailto:'+CONTACT_EMAIL+'?subject=Free%20call%20request&body='+body+'">Email us instead</a>.';
+    msg.className = 'msg err';
+  } finally { btn.disabled = false; btn.textContent = 'Send and request a call'; }
+});
+</script>
+</body>
+</html>
