@@ -219,7 +219,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <a class="btn btn-primary" href="#contact">Book a free 30-minute call</a>
         <a class="btn btn-ghost" href="#how">See the 90-day plan</a>
       </div>
-      <p class="fine" style="margin-top:14px">First call is free. Engagements start at $7,500 for 90 days.</p>
+      <p class="fine" style="margin-top:14px">First call is free. Engagements start at <span class="price-from">$7,500</span> for 90 days.</p>
 
       <div class="proof" data-track="fs">
         <div><b>85%</b>of advisers name AI their top compliance priority in 2026</div>
@@ -453,7 +453,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <span class="eyebrow">Pricing</span>
     <h2>Flat fee for 90 days. Then month to month.</h2>
     <div class="price-wrap" style="margin-top:28px">
-      <div class="price">
+      <div class="price" data-track="fs">
         <div class="amt">$7,500<small> for the 90-day launch</small></div>
         <p style="opacity:.85;margin-top:10px">For firms up to about 15 people. Larger teams and multi-office firms are scoped on the first call. Software licenses are yours and separate.</p>
         <ul>
@@ -465,6 +465,32 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </ul>
         <a class="btn btn-primary" href="#contact">Book a free call</a>
         <p class="fine" style="color:rgba(255,255,255,.72);margin:12px 0 0">After 90 days: ongoing support and the next workflow from $1,500/month. Cancel any month.</p>
+      </div>
+      <div class="price" data-track="pe">
+        <div class="amt">$7,500<small> for the 90-day launch</small></div>
+        <p style="opacity:.85;margin-top:10px">For firms up to about 15 people. Larger teams and portfolio rollouts are scoped on the first call. Software licenses are yours and separate.</p>
+        <ul>
+          <li>Assessment, policy, and private workspace setup</li>
+          <li>Live training on one target workflow</li>
+          <li>Playbook, prompt set, and review steps</li>
+          <li>AI policy language and records for DDQs at day 90</li>
+          <li>Direct access to the person doing the work</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Book a free call</a>
+        <p class="fine" style="color:rgba(255,255,255,.72);margin:12px 0 0">After 90 days: ongoing support and the next workflow from $1,500/month. Cancel any month.</p>
+      </div>
+      <div class="price" data-track="tr">
+        <div class="amt">$4,500<small> for the 90-day launch</small></div>
+        <p style="opacity:.85;margin-top:10px">For companies up to about 25 people. Built lean: one workflow, the office team, and the rules that keep it safe. Software licenses are yours and separate.</p>
+        <ul>
+          <li>Half-day assessment and one-page AI rules for the shop</li>
+          <li>Two live training sessions on one target workflow</li>
+          <li>Prompt set and review step written down</li>
+          <li>Before/after time study at day 90</li>
+          <li>Direct access to the person doing the work</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Book a free call</a>
+        <p class="fine" style="color:rgba(255,255,255,.72);margin:12px 0 0">After 90 days: monthly check-in and the next workflow from $1,000/month. Cancel any month.</p>
       </div>
       <div class="notfor">
         <h3>A quick fit check</h3>
@@ -519,7 +545,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       </div>
       <p><strong>What to expect</strong></p>
       <p style="color:var(--ink-2)">Twenty minutes on how your team uses AI today and where the exposure is. Ten minutes on what the first 90 days would cover and what it costs. If we're not a fit, you'll leave with a clear next step anyway.</p>
-      <p class="fine">Engagements start at $7,500 for 90 days. The call itself is free with no obligation.</p>
+      <p class="fine">Engagements start at <span class="price-from">$7,500</span> for 90 days. The call itself is free with no obligation.</p>
     </div>
     <form id="contact-form" class="card" novalidate>
       <label>Name <input name="name" required autocomplete="name"></label>
@@ -545,7 +571,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       </label>
       <label>Roughly how many people? <input name="headcount" inputmode="numeric" placeholder="e.g. 12"></label>
       <label>What's the one thing you'd fix first? <textarea name="message" placeholder="Unsupervised ChatGPT use, slow IC memos, meeting notes nobody files, an exam coming up..."></textarea></label>
-      <label class="check"><input type="checkbox" name="budget_ok" value="yes" required> I understand engagements start at $7,500 for 90 days and the first call is free.</label>
+      <label class="check"><input type="checkbox" name="budget_ok" value="yes" required> I understand engagements start at <span class="price-from">$7,500</span> for 90 days and the first call is free.</label>
       <input class="hp" type="text" name="company_website" tabindex="-1" autocomplete="off">
       <input type="hidden" name="track" id="track-field" value="fs">
       <button class="btn btn-primary" type="submit">Send and request a call</button>
@@ -593,6 +619,7 @@ function setTrack(t, push) {
   document.querySelectorAll('.seg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.set === t)));
   document.title = TRACK_TITLES[t];
   document.getElementById('track-field').value = t;
+  document.querySelectorAll('.price-from').forEach(el => { el.textContent = t === 'tr' ? '$4,500' : '$7,500'; });
   const sel = document.getElementById('industry');
   if (sel && !sel.value) { /* leave blank until user picks; default is set on submit if still blank */ }
   try { localStorage.setItem('gecko-track', t); } catch (e) {}
