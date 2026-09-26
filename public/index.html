@@ -451,7 +451,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div>
       <span class="eyebrow">Get started</span>
       <h2>Book a free 30-minute call</h2>
-      <p class="lead">Pick a time, or send the form and we'll reply within one business day.</p>
+      <p class="lead">Send the form and we'll reply within one business day.</p>
       <div class="cta-row" style="margin:10px 0 24px">
         <a class="btn btn-primary" id="book-btn" href="#contact-form" target="_blank" rel="noopener">Pick a time</a>
       </div>
@@ -499,8 +499,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <script>
 // ---- Config ----
-const BOOKING_URL = "https://outlook.office.com/bookwithme/user/d675ad3eb16d484482502293da4e7f8d@gecko-ss.com?anonymous&ep=email";
-const CONTACT_EMAIL = "";               // shown in footer + used for mailto fallback when set
+const BOOKING_URL = ""; // Microsoft Bookings link goes here once meeting hours are set: https://outlook.office.com/bookwithme/user/d675ad3eb16d484482502293da4e7f8d@gecko-ss.com?anonymous&ep=email
+const CONTACT_EMAIL = "dustin.jackson@gecko-ss.com";
 const FORM_ENDPOINT = "/api/contact";   // Cloudflare Pages Function relay
 // ----------------
 
@@ -510,7 +510,7 @@ if (CONTACT_EMAIL) {
   ml.href = 'mailto:' + CONTACT_EMAIL; ml.textContent = CONTACT_EMAIL; w.hidden = false;
 }
 const bb = document.getElementById('book-btn');
-if (BOOKING_URL) { bb.href = BOOKING_URL; } else { bb.removeAttribute('target'); bb.textContent = 'Request a time below'; }
+if (BOOKING_URL) { bb.href = BOOKING_URL; } else { bb.parentElement.hidden = true; }
 
 // ---- Track selector ----
 const TRACK_TITLES = {
@@ -557,9 +557,7 @@ form.addEventListener('submit', async (e) => {
     msg.className = 'msg ok'; form.reset(); setTrack(document.getElementById('track-field').value || 'fs', false);
   } catch (err) {
     const body = encodeURIComponent(Object.entries(data).map(([k,v])=>k+': '+v).join('\n'));
-    msg.innerHTML = CONTACT_EMAIL
-      ? 'Something went wrong sending the form. <a href="mailto:'+CONTACT_EMAIL+'?subject=Call%20request&body='+body+'">Email us instead</a>.'
-      : 'Something went wrong sending the form. Please use the "Pick a time" button above.';
+    msg.innerHTML = 'Something went wrong sending the form. <a href="mailto:'+CONTACT_EMAIL+'?subject=Call%20request&body='+body+'">Email us instead</a>.';
     msg.className = 'msg err';
   } finally { btn.disabled = false; btn.textContent = 'Send and request a call'; }
 });
