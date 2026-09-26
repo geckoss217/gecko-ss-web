@@ -6,7 +6,7 @@
 <title>Gecko Services &amp; Solutions | AI your team can use, with guardrails your compliance team can sign</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<meta name="description" content="Gecko Services & Solutions helps small private equity and financial services firms put AI to work inside the firm: staff training on real workflows, written guardrails, and records an examiner can read. 90-day engagements.">
+<meta name="description" content="Gecko Services & Solutions helps small private equity firms, financial services firms, and trades companies put AI to work inside the business: staff training on real workflows, written guardrails, and records an examiner can read. 90-day engagements.">
 <link rel="canonical" href="https://gecko-ss.com/">
 <meta property="og:title" content="Gecko Services & Solutions | Practical AI. Real Results.">
 <meta property="og:description" content="AI enablement for small PE and financial services firms. Train the team, set the guardrails, keep the records. 90 days to a supervised, working AI practice.">
@@ -76,7 +76,8 @@ header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdro
 .seg{display:inline-flex;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:4px}
 .seg button{font-size:.9rem;font-weight:700;padding:.55em 1.1em;border-radius:999px;border:0;background:transparent;color:#fff;cursor:pointer;opacity:.75}
 .seg button[aria-pressed="true"]{background:var(--gold);color:var(--ink);opacity:1}
-@media(max-width:560px){.seg{width:100%}.seg button{flex:1}}
+.seg .short{display:none}
+@media(max-width:700px){.seg{width:100%}.seg button{flex:1;padding:.6em .5em}.seg .long{display:none}.seg .short{display:inline}}
 
 /* hero */
 .hero{padding:64px 0 52px;background:radial-gradient(1200px 500px at 80% -10%,#dfe7f7,transparent 60%),var(--bg)}
@@ -189,10 +190,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <div class="selector" id="top">
   <div class="wrap">
-    <div class="q">Which sounds like your firm?</div>
+    <div class="q">Which sounds like your business?</div>
     <div class="seg" role="group" aria-label="Choose your track">
-      <button type="button" data-set="fs" aria-pressed="true">Wealth, advisory &amp; financial services</button>
-      <button type="button" data-set="pe" aria-pressed="false">Private equity &amp; private credit</button>
+      <button type="button" data-set="fs" aria-pressed="true"><span class="long">Wealth, advisory &amp; financial services</span><span class="short">Financial services</span></button>
+      <button type="button" data-set="pe" aria-pressed="false"><span class="long">Private equity &amp; private credit</span><span class="short">Private equity</span></button>
+      <button type="button" data-set="tr" aria-pressed="false"><span class="long">Trades &amp; home services</span><span class="short">Trades</span></button>
     </div>
   </div>
 </div>
@@ -210,6 +212,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <h1 data-track="pe">Your deal team already uses AI. Turn it into a firm process instead of a personal habit.</h1>
       <p class="lead" data-track="pe">Gecko Services &amp; Solutions helps lower-middle-market PE and private credit firms put AI to work on CIM review, IC memos, LP reporting, and portfolio operations, with the guardrails your LPs and your counsel expect. Built for firms too small to hire an AI operating partner.</p>
 
+      <h1 data-track="tr">Your office already uses AI. Make it something your whole crew can count on.</h1>
+      <p class="lead" data-track="tr">Gecko Services &amp; Solutions helps plumbing, HVAC, electrical, cleaning, and property services companies with 10 to 50 people teach the office and the field to use AI for the everyday work: quotes, follow-up, scheduling, and the paperwork that eats your evenings. One tool, one problem, ninety days, no wasted subscriptions.</p>
+
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Book a free 30-minute call</a>
         <a class="btn btn-ghost" href="#how">See the 90-day plan</a>
@@ -226,6 +231,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div><b>#1</b>constraint named by PE firms: talent and expertise</div>
         <div><b>15+</b>portcos before a full-time AI hire pencils out</div>
       </div>
+      <div class="proof" data-track="tr">
+        <div><b>73%</b>of small businesses say they need training and implementation help</div>
+        <div><b>6%</b>have AI running inside an actual workflow</div>
+        <div><b>4+ hrs</b>a week back for the owners who do</div>
+      </div>
     </div>
 
     <div class="card sample" aria-label="Example of a supervised AI workflow">
@@ -240,6 +250,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="row" data-track="pe"><span class="t">9:40</span><span>Associate runs the first-pass screen against your thesis using the firm prompt set. Flags land in a one-page brief.</span></div>
       <div class="row" data-track="pe"><span class="t">2:00</span><span>Partner reviews, marks what to dig into. IC memo skeleton drafts from the approved outline.</span></div>
       <div class="row" data-track="pe"><span class="t">Fri</span><span>LP update pulls from the same source of truth. Nobody pastes deal data into a public chatbot.</span></div>
+
+      <strong data-track="tr">A Tuesday at the shop, after we set you up</strong>
+      <div class="row" data-track="tr"><span class="t">7:40</span><span>Dispatcher drops yesterday's job notes and photos in. Quotes draft from your price book in your words. She reviews, sends three before the trucks roll.<span class="tag">reviewed</span></span></div>
+      <div class="row" data-track="tr"><span class="t">10:15</span><span>Missed call from a new number. Approved text-back asks what they need and where. Details land in the CRM with the address filled in.</span></div>
+      <div class="row" data-track="tr"><span class="t">2:30</span><span>Open quotes from last week get a follow-up nudge. Two reply. Nobody had to remember.</span></div>
+      <div class="row" data-track="tr"><span class="t">5:00</span><span>Owner gets a one-screen summary: jobs closed, quotes out, reviews requested. Evening back.</span></div>
     </div>
   </div>
 </section>
@@ -248,7 +264,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="wrap">
     <span class="eyebrow">What we do</span>
     <h2>Teach the team. Set the guardrails. Keep the records.</h2>
-    <p class="lead" style="max-width:66ch">Most firms don't have a tool problem. They have people using AI alone, in the dark, with nothing written down. We fix that in the order an examiner or an LP would ask about it.</p>
+    <p class="lead" style="max-width:66ch" data-track="fs">Most firms don't have a tool problem. They have people using AI alone, in the dark, with nothing written down. We fix that in the order an examiner would ask about it.</p>
+    <p class="lead" style="max-width:66ch" data-track="pe">Most firms don't have a tool problem. They have people using AI alone, in the dark, with nothing written down. We fix that in the order an LP would ask about it.</p>
+    <p class="lead" style="max-width:66ch" data-track="tr">Most shops don't have a tool problem. They have one person in the office who figured out ChatGPT and nobody else who knows what she does. We turn that into something the whole company runs on.</p>
 
     <div class="grid-3" style="margin-top:28px" data-track="fs">
       <div class="tile">
@@ -316,12 +334,50 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       </div>
     </div>
 
-    <p style="margin-top:28px"><strong>Built for firms with 5 to 50 people</strong> that already have outsourced IT and need someone focused on the AI part.</p>
+    <div class="grid-3" style="margin-top:28px" data-track="tr">
+      <div class="tile">
+        <span class="n">1</span>
+        <h3>Train the office first</h3>
+        <p>Dispatch, CSRs, and the owner learn on your real jobs, in the tools you already pay for. Techs get the two things that help in the truck.</p>
+        <ul>
+          <li>Quotes and estimates from notes and photos</li>
+          <li>Customer texts, emails, and review replies</li>
+          <li>Job summaries and invoice cleanup</li>
+        </ul>
+      </div>
+      <div class="tile">
+        <span class="n">2</span>
+        <h3>Guardrails that keep you out of trouble</h3>
+        <p>Simple rules for what goes into AI and what never does, who checks a quote before it goes out, and which tools are approved so you're not paying for six.</p>
+        <ul>
+          <li>Customer data stays inside your systems</li>
+          <li>Owner or manager review on anything with a price</li>
+          <li>One approved tool, subscriptions cancelled</li>
+        </ul>
+      </div>
+      <div class="tile">
+        <span class="n">3</span>
+        <h3>Hours you can measure</h3>
+        <p>We time the work before and after so you know what came back. Then the next workflow gets picked from the numbers.</p>
+        <ul>
+          <li>Before/after time study on the target job</li>
+          <li>Weekly owner summary</li>
+          <li>Playbook your next hire learns from</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="margin-top:28px" data-track="fs"><strong>Built for firms with 5 to 50 people</strong> that already have outsourced IT and need someone focused on the AI part.</p>
+    <p style="margin-top:28px" data-track="pe"><strong>Built for firms with 5 to 50 people</strong> that already have outsourced IT and need someone focused on the AI part.</p>
+    <p style="margin-top:28px" data-track="tr"><strong>Built for companies with 10 to 50 people</strong> doing $1M to $20M a year, usually with an outside IT company already in place.</p>
     <div class="who" data-track="fs">
       <span>Independent RIAs</span><span>Hybrid and independent broker-dealers</span><span>Insurance agencies</span><span>Small lenders and credit unions</span><span>CPA and family-office adjacent firms</span>
     </div>
     <div class="who" data-track="pe">
       <span>Lower-middle-market buyout</span><span>Growth equity</span><span>Private credit</span><span>Search funds and independent sponsors</span><span>Family offices with direct deals</span>
+    </div>
+    <div class="who" data-track="tr">
+      <span>Plumbing, HVAC, electrical</span><span>Cleaning and restoration</span><span>Property management and maintenance</span><span>Landscaping and exteriors</span><span>Pest control</span><span>Any company that books work by phone</span>
     </div>
   </div>
 </section>
@@ -372,7 +428,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <span class="eyebrow">Guardrails</span>
     <h2 data-track="fs">What the 2026 exam checklist looks like, and what we put in place</h2>
     <h2 data-track="pe">What LPs and counsel now ask about, and what we put in place</h2>
+    <h2 data-track="tr">What keeps AI from costing you a customer, and what we put in place</h2>
     <p class="lead" style="max-width:66ch" data-track="fs">The SEC and FINRA didn't write a new AI rule. They're testing the old ones against AI: supervision, books and records, privacy, and marketing claims. Each item below maps to one of those.</p>
+    <p class="lead" style="max-width:66ch" data-track="tr">A wrong price in an AI-drafted quote, a customer's address in a public chatbot, or a review reply that sounds like a robot. Each of those is one bad day. Each item below closes one of them.</p>
     <p class="lead" style="max-width:66ch" data-track="pe">DDQs now carry AI questions. Fundraising decks get read for AI-washing. Deal data in a public chatbot is a headline waiting to happen. Each item below closes one of those gaps.</p>
     <div class="check-grid">
       <div><span class="ck">✓</span><div><b>Acceptable-use policy</b><br>Short, specific, and matched to the tools you actually allow.</div></div>
@@ -384,7 +442,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div><span class="ck">✓</span><div><b>Data boundaries</b><br>Client PII and deal data stay inside your tenant. Public chatbots get blocked or fenced.</div></div>
       <div><span class="ck">✓</span><div><b>Claims review</b><br>Marketing and fundraising language about AI checked against what you can prove.</div></div>
     </div>
-    <p class="fine" style="margin-top:18px">We work alongside your compliance consultant or outside counsel. They own the legal opinion. We make it real inside the tenant and the team.</p>
+    <p class="fine" style="margin-top:18px" data-track="fs">We work alongside your compliance consultant or outside counsel. They own the legal opinion. We make it real inside the tenant and the team.</p>
+    <p class="fine" style="margin-top:18px" data-track="pe">We work alongside your compliance consultant or outside counsel. They own the legal opinion. We make it real inside the tenant and the team.</p>
+    <p class="fine" style="margin-top:18px" data-track="tr">We work alongside your existing IT company. They keep the network running. We handle the AI side and hand them the documentation.</p>
   </div>
 </section>
 
@@ -410,7 +470,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <h3>A quick fit check</h3>
         <p>This works when:</p>
         <ul>
-          <li>Partners will show up to the sessions</li>
+          <li>The owner or partners will show up to the sessions</li>
           <li>You want AI use to be supervised and documented, not banned or ignored</li>
           <li>You'd rather change one workflow well than buy another platform</li>
         </ul>
@@ -435,12 +495,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <section id="faq" class="soft">
   <div class="wrap" style="max-width:800px">
     <span class="eyebrow">FAQ</span>
-    <h2>Questions partners ask on the first call</h2>
+    <h2>Questions owners and partners ask on the first call</h2>
     <details data-track="fs"><summary>Our compliance consultant already gave us an AI policy. Why do we need this?</summary><p>Most firms have the policy. Fewer than half have the review steps, and about a third test outputs. The policy is the easy part. We make the day-to-day match it and produce the records that prove it.</p></details>
     <details data-track="fs"><summary>Which tools do you push?</summary><p>None. We work with what your custodian, BD, or IT provider already approves: Microsoft Copilot, Google Gemini, Claude, or a compliant notetaker. If your firm has no approved tool yet, we help you pick one and document why.</p></details>
     <details data-track="pe"><summary>We're a small team. Isn't this overkill?</summary><p>A firm with three to ten investment professionals can't justify an AI operating partner. That's the gap. Ninety days gives you a working process, a policy you can attach to a DDQ, and a playbook you can run again in a portfolio company.</p></details>
     <details data-track="pe"><summary>Can you work inside our portfolio companies too?</summary><p>Yes. The same 90-day structure runs inside a portco, starting in finance or operations. Most firms pilot it in one company, then decide whether to roll it out.</p></details>
-    <details><summary>What do you need from us?</summary><p>Partner attendance at the sessions, one internal champion, and access to your Microsoft 365 or Google Workspace admin (or your IT provider's cooperation). Everything else we bring.</p></details>
+    <details data-track="tr"><summary>We're a 15-person shop. Is this too much?</summary><p>Ninety days and one workflow is about right for that size. Most of the payoff in a trades company is in the office: quotes, follow-up, and scheduling. Get that running and the field side gets easier on its own.</p></details>
+    <details data-track="tr"><summary>Do we have to switch off Jobber, Housecall Pro, or ServiceTitan?</summary><p>No. We work inside what you have. If your current setup is the real problem, we'll tell you before you spend a dollar with us.</p></details>
+    <details><summary>What do you need from us?</summary><p>Owner or partner attendance at the sessions, one internal champion, and access to your Microsoft 365 or Google Workspace admin (or your IT provider's cooperation). Everything else we bring.</p></details>
     <details><summary>Is our data safe with you?</summary><p>Your data stays in your accounts. We don't take copies. Every tool we recommend is reviewed for training use, retention, and data residency, and that review goes in your vendor file.</p></details>
     <details><summary>What happens after 90 days?</summary><p>You'll have a working workflow, a playbook, and a report. Many firms keep us on for a monthly check-in and the next workflow. Some run the playbook themselves. Either is a good outcome.</p></details>
   </div>
@@ -474,6 +536,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <option>Private equity / growth</option>
           <option>Private credit</option>
           <option>Family office</option>
+          <option>Plumbing / HVAC / Electrical</option>
+          <option>Cleaning / Restoration</option>
+          <option>Property management / maintenance</option>
+          <option>Other trades / home services</option>
           <option>Other</option>
         </select>
       </label>
@@ -515,12 +581,13 @@ if (BOOKING_URL) { bb.href = BOOKING_URL; } else { bb.parentElement.hidden = tru
 // ---- Track selector ----
 const TRACK_TITLES = {
   fs: "Gecko Services & Solutions | AI enablement for RIAs, broker-dealers, and insurance agencies",
-  pe: "Gecko Services & Solutions | AI enablement for lower-middle-market private equity"
+  pe: "Gecko Services & Solutions | AI enablement for lower-middle-market private equity",
+  tr: "Gecko Services & Solutions | AI training and guardrails for trades and home services companies"
 };
-const INDUSTRY_DEFAULT = { fs: "RIA / wealth management", pe: "Private equity / growth" };
+const INDUSTRY_DEFAULT = { fs: "RIA / wealth management", pe: "Private equity / growth", tr: "Plumbing / HVAC / Electrical" };
 function setTrack(t, push) {
-  if (t !== 'pe' && t !== 'fs') t = 'fs';
-  document.body.classList.remove('track-pe','track-fs');
+  if (t !== 'pe' && t !== 'fs' && t !== 'tr') t = 'fs';
+  document.body.classList.remove('track-pe','track-fs','track-tr');
   document.body.classList.add('track-' + t);
   document.querySelectorAll('[data-track]').forEach(el => { el.hidden = el.dataset.track !== t; });
   document.querySelectorAll('.seg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.set === t)));
@@ -534,7 +601,7 @@ function setTrack(t, push) {
 document.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => setTrack(b.dataset.set, true)));
 (function initTrack(){
   const h = (location.hash || '').replace('#','');
-  let t = (h === 'pe' || h === 'fs') ? h : null;
+  let t = (h === 'pe' || h === 'fs' || h === 'tr') ? h : null;
   if (!t) { try { t = localStorage.getItem('gecko-track'); } catch (e) {} }
   setTrack(t || 'fs', false);
 })();
